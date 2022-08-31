@@ -9,7 +9,7 @@ st.write("FASTA Suite [link](https://pgarrett-scripps-fastasuite-home-v5ftop.str
 st.write("Peptide Modification Visualizer [link](https://pgarrett-scripps-peptidemodificationvis-modification-app-ctqser.streamlitapp.com/)")
 st.write("Fragment Ion Visualizer [link](https://pgarrett-scripps-fragmentionvisualizer-main-qbdch1.streamlitapp.com/)")
 st.write("Spectral Library Generator [link](https://pgarrett-scripps-peptidemodificati-spectral-library-app-6gepgv.streamlitapp.com/)")
-#st.write("GlycoMSQuantpy [link]()")
+st.write("GlycoMSQuantpy [link](https://pgarrett-scripps-glycomsquantpy-home-3gd96u.streamlitapp.com/)")
 
 st.subheader("Private (Scripps VPN Required)")
 st.write("Search Engine [link](http://marlin:8501)")
