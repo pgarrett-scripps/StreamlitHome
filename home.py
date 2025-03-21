@@ -40,12 +40,12 @@ apps = [
         image=data,
         url="https://pep-frag.streamlit.app/",
         styles=CARD_STYLE),
+
     App(title="PdbCov",
         desc="3D Protein Coverage Analyzer",
         image=data,
         url="https://pdb-cov.streamlit.app/",
         styles=CARD_STYLE),
-
 ]
 
 COLS = 5
