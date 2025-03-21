@@ -19,9 +19,9 @@ st.title('Proteomics Tools')
 
 CARD_STYLE = {
                 "card": {
-                    "width": "200px",
+                    "width": "250px",
                     # <- make the card use the width of its container, note that it will not resize the height of the card automatically
-                    "height": "200px",  # <- if you want to set the card height to 300px
+                    "height": "250px",  # <- if you want to set the card height to 300px
                 }
             }
 
@@ -46,6 +46,12 @@ apps = [
         image=data,
         url="https://pdb-cov.streamlit.app/",
         styles=CARD_STYLE),
+
+    App(title="DTA-PdbCov",
+        desc="Pdb-Cov link generator for DtaSelectFilter files",
+        image=data,
+        url="https://dta-pdb-cov.streamlit.app/",
+        styles=CARD_STYLE)
 ]
 
 COLS = 5
