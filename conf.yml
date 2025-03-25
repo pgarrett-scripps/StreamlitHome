@@ -1,0 +1,28 @@
+categories:
+  proteomics: 'Fragmentation'
+  pdb_cov: 'Protein Coverage'
+
+apps:
+  - title: PepFrag
+    description: Peptide Fragment Ion Calculator
+    url: https://pep-frag.streamlit.app/
+    category: proteomics
+    emoji: '💣'
+
+  - title: PdbCov
+    description: 3D Protein Coverage Analyzer
+    url: https://pdb-cov.streamlit.app/
+    category: pdb_cov
+    emoji: '🧬'
+
+  - title: DTA-PdbCov
+    description: Pdb-Cov link generator for DtaSelectFilter files
+    url: https://dta-pdb-cov.streamlit.app/
+    category: pdb_cov
+    emoji: '🔬'
+
+  - title: FastaDigest
+    description: Protein Digestion Simulator
+    url: https://fasta-digest.streamlit.app/
+    category: proteomics
+    emoji: '🍽️'

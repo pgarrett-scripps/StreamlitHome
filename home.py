@@ -1,70 +1,131 @@
-import dataclasses
-import base64
+from app_loader import AppLoader
 
 import streamlit as st
-from streamlit_card import card
-
-st.set_page_config(layout="wide")
 
 
-with open("background.jpg", "rb") as f:
-    data = f.read()
-    encoded = base64.b64encode(data)
-data = "data:image/png;base64," + encoded.decode("utf-8")
+st.set_page_config(
+    page_title="ProteomicsTools",
+    page_icon=":rocket:",
+    layout="wide"
+)
+
+def custom_card(title, description, url, emoji, bg_color="#f0f8ff", height="300px", width="100%"):
+    """
+    Create a custom card component using st.markdown with emoji
+
+    Args:
+        title (str): Title of the card
+        description (str): Description text for the card
+        url (str): URL to link to when card is clicked
+        emoji (str): Emoji to display on the card
+        bg_color (str, optional): Background color of the card. Defaults to light blue.
+        height (str, optional): Height of the card. Defaults to "300px".
+        width (str, optional): Width of the card. Defaults to "100%".
+    """
+    # Custom CSS for the card with responsive design
+    card_css = f"""
+    <style>
+    .custom-card-container {{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        width: 100%;
+    }}
+    .custom-card {{
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        height: {height};
+        width: {width};
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: {bg_color};
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }}
+    .custom-card:hover {{
+        transform: scale(1.03);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }}
+    .card-emoji {{
+        font-size: 64px;
+        margin-bottom: 15px;
+    }}
+    .card-content {{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }}
+    .card-title {{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        width: 100%;
+    }}
+    .card-description {{
+        font-size: 15px;
+        color: #666;
+        width: 100%;
+    }}
+    @media (max-width: 768px) {{
+        .custom-card {{
+            width: 100%;
+            max-width: none;
+        }}
+    }}
+    </style>
+    """
+
+    # Card HTML
+    card_html = f"""
+    {card_css}
+    <div class="custom-card-container">
+        <a href="{url}" target="_blank" style="text-decoration: none; color: inherit; width: 100%;">
+            <div class="custom-card">
+                <div class="card-emoji">{emoji}</div>
+                <div class="card-content">
+                    <div class="card-title">{title}</div>
+                    <div class="card-description">{description}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    """
+
+    # Render markdown
+    st.markdown(card_html, unsafe_allow_html=True)
 
 
-st.title('Proteomics Tools')
+# Example usage in your main script would replace the previous card() call:
+def render_apps(config):
+    for i, category in enumerate(config['categories']):
+        st.header(config['categories'][category], divider=True)
+        apps = AppLoader.get_apps_by_category(config, category)
 
-# wide mode
+        COLS = 4
+        cols = st.columns(COLS, vertical_alignment='center')
+        for j, app in enumerate(apps):
+            with cols[j % COLS]:
+                custom_card(
+                    title=app.title,
+                    description=app.description,
+                    url=app.url,
+                    emoji=app.emoji,
+                    bg_color="#f0f8ff",
+                    height="250px",
+                    width="100%"
+                )
 
-CARD_STYLE = {
-                "card": {
-                    "width": "250px",
-                    # <- make the card use the width of its container, note that it will not resize the height of the card automatically
-                    "height": "250px",  # <- if you want to set the card height to 300px
-                }
-            }
 
-
-@dataclasses.dataclass
-class App:
-    title: str
-    desc: str
-    image: str
-    url: str
-    styles: dict
-
-apps = [
-    App(title="PepFrag",
-        desc="Peptide Fragment Ion Calculator",
-        image=data,
-        url="https://pep-frag.streamlit.app/",
-        styles=CARD_STYLE),
-
-    App(title="PdbCov",
-        desc="3D Protein Coverage Analyzer",
-        image=data,
-        url="https://pdb-cov.streamlit.app/",
-        styles=CARD_STYLE),
-
-    App(title="DTA-PdbCov",
-        desc="Pdb-Cov link generator for DtaSelectFilter files",
-        image=data,
-        url="https://dta-pdb-cov.streamlit.app/",
-        styles=CARD_STYLE)
-]
-
-COLS = 5
-cols = st.columns(COLS)
-for i, app in enumerate(apps):
-    with cols[i % COLS]:
-        card(
-            title=app.title,
-            text=app.desc,
-            image=app.image,
-            url=app.url,
-            styles=app.styles
-        )
-
-st.write("")
-st.write("contact: pgarrett@scripps.edu")
+config = AppLoader.load_from_yaml('conf.yml')
+render_apps(config)
