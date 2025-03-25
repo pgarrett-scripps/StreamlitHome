@@ -1,5 +1,5 @@
 categories:
-  proteomics: 'Fragmentation'
+  proteomics: 'Proteomics'
   pdb_cov: 'Protein Coverage'
 
 apps:
@@ -10,7 +10,7 @@ apps:
     emoji: '💣'
 
   - title: PdbCov
-    description: 3D Protein Coverage Analyzer
+    description: 3D Protein Sequence Coverage Visualizer
     url: https://pdb-cov.streamlit.app/
     category: pdb_cov
     emoji: '🧬'
@@ -22,7 +22,7 @@ apps:
     emoji: '🔬'
 
   - title: FastaDigest
-    description: Protein Digestion Simulator
+    description: A Fasta Digestion Tool
     url: https://fasta-digest.streamlit.app/
     category: proteomics
     emoji: '🍽️'

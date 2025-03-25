@@ -1,9 +1,9 @@
 name: Wake Up Streamlit Apps
 
 on:
-  # Run every 24 hours
   schedule:
-    - cron: '0 0 * * *'  # Midnight UTC
+    - cron: '0 0 * * *'   # Midnight UTC
+    - cron: '0 12 * * *'  # Noon UTC
 
   # Allows manual triggering
   workflow_dispatch:
