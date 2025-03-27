@@ -1,7 +1,7 @@
 categories:
   proteomics: 'Proteomics'
   pdb_cov: 'Protein Coverage'
-  simple: 'General Bio/Chem Calculators'
+  simple: 'Reference'
   ip2: 'IP2 Specific'
   other: 'Other'
 
@@ -60,28 +60,35 @@ apps:
     description: Amino Acid Mass Calculator
     url: https://amino-acid-calc.streamlit.app/
     category: simple
-    emoji: '🧬'
+    emoji: '🧰'
 
   # https://chem-formula.streamlit.app/
   - title: ChemFormula
     description: Chemical Formula Calculator
     url: https://chem-formula.streamlit.app/
     category: simple
-    emoji: '🧬'
+    emoji: '🧰'
 
   # https://element.streamlit.app/
   - title: Element
     description: Element Information
     url: https://element.streamlit.app/
     category: simple
-    emoji: '🧬'
+    emoji: '🧰'
 
   # https://modifications.streamlit.app/
   - title: PeptideMods
     description: Peptide Modifications
     url: https://modifications.streamlit.app/
     category: simple
-    emoji: '🧬'
+    emoji: '🧰'
+
+  # https://protease-regexes.streamlit.app/
+  - title: ProteaseRegexes
+    description: Protease Regular Expressions (Regex)
+    url: https://protease-regexes.streamlit.app/
+    category: simple
+    emoji: '🧰'
 
 
   - title: PdbCov

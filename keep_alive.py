@@ -9,7 +9,7 @@ import time
 from app_loader import AppLoader
 
 # List of your Streamlit app URLs
-KEEP_ALIVE_CATEGORIES = ('proteomics')
+KEEP_ALIVE_CATEGORIES = ('proteomics', 'simple')
 HOME_URL = 'https://proteomics-tools.streamlit.app/'
 
 all_apps = AppLoader.load_from_yaml('conf.yml')['apps']
