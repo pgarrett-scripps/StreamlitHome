@@ -2,14 +2,14 @@ from app_loader import AppLoader
 
 import streamlit as st
 
-
 st.set_page_config(
     page_title="ProteomicsTools",
     page_icon=":rocket:",
     layout="wide"
 )
 
-def custom_card(title, description, url, emoji, bg_color="#f0f8ff", height="300px", width="100%"):
+
+def custom_card(title, description, url, emoji, bg_color="#f0f8ff", height="350px", width="100%"):
     """
     Create a custom card component using st.markdown with emoji
 
@@ -61,7 +61,7 @@ def custom_card(title, description, url, emoji, bg_color="#f0f8ff", height="300p
     .card-content {{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;   /* Align cards to the top-left */
         align-items: center;
         height: 100%;
         width: 100%;
@@ -107,13 +107,14 @@ def custom_card(title, description, url, emoji, bg_color="#f0f8ff", height="300p
 
 
 # Example usage in your main script would replace the previous card() call:
+@st.cache_resource
 def render_apps(config):
     for i, category in enumerate(config['categories']):
         st.header(config['categories'][category], divider=True)
         apps = AppLoader.get_apps_by_category(config, category)
 
         COLS = 4
-        cols = st.columns(COLS, vertical_alignment='center')
+        cols = st.columns(COLS, vertical_alignment='top')
         for j, app in enumerate(apps):
             with cols[j % COLS]:
                 custom_card(
@@ -122,7 +123,7 @@ def render_apps(config):
                     url=app.url,
                     emoji=app.emoji,
                     bg_color="#f0f8ff",
-                    height="250px",
+                    height="270px",
                     width="100%"
                 )
 

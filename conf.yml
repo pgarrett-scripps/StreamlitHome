@@ -1,6 +1,9 @@
 categories:
   proteomics: 'Proteomics'
   pdb_cov: 'Protein Coverage'
+  simple: 'General Bio/Chem Calculators'
+  ip2: 'IP2 Specific'
+  other: 'Other'
 
 apps:
   - title: PepFrag
@@ -8,6 +11,78 @@ apps:
     url: https://pep-frag.streamlit.app/
     category: proteomics
     emoji: '💣'
+
+  - title: FastaDigest
+    description: A Fasta Digestion Tool
+    url: https://fasta-digest.streamlit.app/
+    category: proteomics
+    emoji: '🍽️'
+
+  - title: SpecView
+    description: Mass Spectra Viewer & Annotator
+    url: https://spec-view.streamlit.app/
+    category: proteomics
+    emoji: '👓'
+
+  - title: MsDecon
+    description: Mass Spectra Deconvolution
+    url: https://msdecon.streamlit.app/
+    category: proteomics
+    emoji: '📊'
+
+  - title: IsoCalc
+    description: Peptide/Formula Isotopic Distributions Calculator
+    url: https://isotopic-distributions.streamlit.app/
+    category: proteomics
+    emoji: '💻📊'
+
+  - title: Multi-IsoCalc
+    description: Overlapping Isotopic Distributions Calculator
+    url: https://peptide-isotopic-distributions.streamlit.app/
+    category: proteomics
+    emoji: '💻📊'
+
+  - title: ProteinCleaver
+    description: A Protein Cleavage Site Finder
+    url: https://proteincleaver.streamlit.app/
+    category: proteomics
+    emoji: '🔪'
+
+  # https://fasta-suite.streamlit.app/
+  - title: FastaSuite
+    description: Generate & Populate Decoy Fasta Files
+    url: https://fasta-suite.streamlit.app/
+    category: proteomics
+    emoji: '🧬'
+
+  # https://amino-acid-calc.streamlit.app/
+  - title: AminoAcidCalc
+    description: Amino Acid Mass Calculator
+    url: https://amino-acid-calc.streamlit.app/
+    category: simple
+    emoji: '🧬'
+
+  # https://chem-formula.streamlit.app/
+  - title: ChemFormula
+    description: Chemical Formula Calculator
+    url: https://chem-formula.streamlit.app/
+    category: simple
+    emoji: '🧬'
+
+  # https://element.streamlit.app/
+  - title: Element
+    description: Element Information
+    url: https://element.streamlit.app/
+    category: simple
+    emoji: '🧬'
+
+  # https://modifications.streamlit.app/
+  - title: PeptideMods
+    description: Peptide Modifications
+    url: https://modifications.streamlit.app/
+    category: simple
+    emoji: '🧬'
+
 
   - title: PdbCov
     description: 3D Protein Sequence Coverage Visualizer
@@ -21,8 +96,109 @@ apps:
     category: pdb_cov
     emoji: '🔬'
 
-  - title: FastaDigest
-    description: A Fasta Digestion Tool
-    url: https://fasta-digest.streamlit.app/
-    category: proteomics
-    emoji: '🍽️'
+
+
+  - title: TimsTof-DutyCycle
+    description: A simple duty cycle calculator
+    url: https://timsdutycycle-plotly.streamlit.app/
+    category: other
+    emoji: '🔧'
+
+
+
+  - title: FileViewer
+    description: A tabular & parquet file viewer
+    url: https://csv-text-viewer.streamlit.app/
+    category: other
+    emoji: '📄'
+
+  - title: SwissBiopics
+    description: Highlight cell images from the SwissBioPics dataset
+    url: https://swissbiopics.streamlit.app/
+    category: other
+    emoji: '🖼️'
+
+  - title: ScatterPlot
+    description: A 2/3D scatter plot viewer
+    url: https://scatterplot.streamlit.app/
+    category: other
+    emoji: '📈'
+
+  - title: Pubmed Affiliations
+    description: A tool to extract affiliations from Pubmed articles
+    url: https://pubmedaffiliations.streamlit.app/
+    category: other
+    emoji: '📚'
+
+  # https://fasta-to-prey.streamlit.app/
+  - title: FastaToPrey
+    description: Convert Fasta to Prey format
+    url: https://fasta-to-prey.streamlit.app/
+    category: other
+    emoji: '🧬'
+
+  # https://af-pdb.streamlit.app/
+  - title: AF-Pdb
+    description: Converts AlphaFoldServer Predictions to PDB
+    url: https://af-pdb.streamlit.app/
+    category: other
+    emoji: '🧬'
+
+
+  # IP2 Specific
+  # https://enzyme-site-explorer.streamlit.app/
+  - title: EnzymeSiteExplorer
+    description: Visualize Observed Enzyme Specificity
+    url: https://enzyme-site-explorer.streamlit.app/
+    category: ip2
+    emoji: '🧬'
+
+  # https://enzyme-site-explorer-adv.streamlit.app/
+  - title: EnzymeSiteExplorer-Adv
+    description: Identify Enzyme Specificity
+    url: https://enzyme-site-explorer-adv.streamlit.app/
+    category: ip2
+    emoji: '🧬'
+
+  # https://missed-cleavage-explorer.streamlit.app/
+  - title: MC-Explorer
+    description: Identify Missed Cleavage Patterns
+    url: https://missed-cleavage-explorer.streamlit.app/
+    category: ip2
+    emoji: '🔬'
+
+  # https://aa-freq-comp.streamlit.app/
+  - title: AAFreqComp
+    description: Compares Expected to Observed AA Frequencies
+    url: https://aa-freq-comp.streamlit.app/
+    category: ip2
+    emoji: '🧬'
+
+  - title: FastaFilter
+    description: Filter Fasta by Proteins
+    url: https://fastafilter.streamlit.app/
+    category: ip2
+    emoji: '🧬'
+
+  # https://filtercompare.streamlit.app/
+  - title: FilterCompare
+    description: Compare two filter files
+    url: https://filtercompare.streamlit.app/
+    category: ip2
+    emoji: '🔬'
+
+  # https://spectrasuite.streamlit.app/
+  - title: SpectraSuite
+    description: Spectra Suite
+    url: https://spectrasuite.streamlit.app/
+    category: ip2
+    emoji: '🔬'
+
+  # https://diann-to-pcq-converter.streamlit.app/
+  - title: DiannToPcq
+    description: Convert DIANN to PCQ
+    url: https://diann-to-pcq-converter.streamlit.app/
+    category: ip2
+    emoji: '🔬'
+
+

@@ -9,11 +9,12 @@ import time
 from app_loader import AppLoader
 
 # List of your Streamlit app URLs
+KEEP_ALIVE_CATEGORIES = ('proteomics')
+HOME_URL = 'https://proteomics-tools.streamlit.app/'
 
-config = AppLoader.load_from_yaml('conf.yml')
-# Get all apps
-all_apps = config['apps']
-app_urls = [app.url for app in all_apps] + ['https://proteomics-tools.streamlit.app/']
+all_apps = AppLoader.load_from_yaml('conf.yml')['apps']
+app_urls = [HOME_URL]
+app_urls.extend([app.url for app in all_apps if app.category in KEEP_ALIVE_CATEGORIES])
 
 
 def initialize_driver():
