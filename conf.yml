@@ -32,13 +32,13 @@ apps:
 
   - title: IsoCalc
     description: Peptide/Formula Isotopic Distributions Calculator
-    url: https://isotopic-distributions.streamlit.app/
+    url: https://iso-calc.streamlit.app/
     category: proteomics
     emoji: '💻📊'
 
   - title: Multi-IsoCalc
     description: Overlapping Isotopic Distributions Calculator
-    url: https://peptide-isotopic-distributions.streamlit.app/
+    url: https://multi-iso-calc.streamlit.app/
     category: proteomics
     emoji: '💻📊'
 
