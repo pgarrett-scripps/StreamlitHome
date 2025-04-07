@@ -56,29 +56,29 @@ apps:
     emoji: '🧬'
 
   # https://amino-acid-calc.streamlit.app/
-  - title: AminoAcidCalc
-    description: Amino Acid Mass Calculator
+  - title: AA-Calc
+    description: Amino Acid Mass & Composition Calculator
     url: https://amino-acid-calc.streamlit.app/
     category: simple
     emoji: '🧰'
 
   # https://chem-formula.streamlit.app/
-  - title: ChemFormula
-    description: Chemical Formula Calculator
+  - title: ChemFormula-Calc
+    description: Chemical Formula Mass & Composition Calculator
     url: https://chem-formula.streamlit.app/
     category: simple
     emoji: '🧰'
 
   # https://element.streamlit.app/
-  - title: Element
-    description: Element Information
+  - title: Element-Info
+    description: Element Information (Number, Mono & Avg Mass)
     url: https://element.streamlit.app/
     category: simple
     emoji: '🧰'
 
   # https://modifications.streamlit.app/
-  - title: PeptideMods
-    description: Peptide Modifications
+  - title: Mod-Info
+    description: Peptide Modifications Information (Mass & Composition)
     url: https://modifications.streamlit.app/
     category: simple
     emoji: '🧰'
