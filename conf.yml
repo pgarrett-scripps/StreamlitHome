@@ -54,12 +54,6 @@ apps:
     category: proteomics
     emoji: '🧬'
 
-  - title: SeqCov
-    description: Compare Protein Sequence Coverage
-    url: https://seq-cov.streamlit.app/
-    category: proteomics
-    emoji: '🧬'
-
   # https://amino-acid-calc.streamlit.app/
   - title: AA-Calc
     description: Amino Acid Mass & Composition Calculator
@@ -156,6 +150,11 @@ apps:
     category: other
     emoji: '🧬'
 
+  - title: SeqCov
+    description: Compare Protein Sequence Coverage
+    url: https://seq-cov.streamlit.app/
+    category: other
+    emoji: '🧬'
 
   # IP2 Specific
   # https://enzyme-site-explorer.streamlit.app/
@@ -212,5 +211,7 @@ apps:
     url: https://diann-to-pcq-converter.streamlit.app/
     category: ip2
     emoji: '🔬'
+
+    
 
 
