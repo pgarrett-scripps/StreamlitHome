@@ -48,10 +48,15 @@ apps:
     category: proteomics
     emoji: '🔪'
 
-  # https://fasta-suite.streamlit.app/
   - title: FastaSuite
     description: Generate & Populate Decoy Fasta Files
     url: https://fasta-suite.streamlit.app/
+    category: proteomics
+    emoji: '🧬'
+
+  - title: SeqCov
+    description: Compare Protein Sequence Coverage
+    url: https://seq-cov.streamlit.app/
     category: proteomics
     emoji: '🧬'
 
