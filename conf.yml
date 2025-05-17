@@ -54,6 +54,12 @@ apps:
     category: proteomics
     emoji: '🧬'
 
+  - title: AAReplacement
+    description: Calculate Potential Mass Shifts
+    url: https://aa-replacement-calc.streamlit.app/
+    category: proteomics
+    emoji: '🧬'
+
   # https://amino-acid-calc.streamlit.app/
   - title: AA-Calc
     description: Amino Acid Mass & Composition Calculator
@@ -153,6 +159,13 @@ apps:
   - title: SeqCov
     description: Compare Protein Sequence Coverage
     url: https://seq-cov.streamlit.app/
+    category: other
+    emoji: '🧬'
+
+  
+  - title: SageAmbiguityAnnot
+    description: Annoatate Sage PSMs with Sequence Ambiguity
+    url: https://sage-peptide-ambiguity-annotator.streamlit.app/
     category: other
     emoji: '🧬'
 
