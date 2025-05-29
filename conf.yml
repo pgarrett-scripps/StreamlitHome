@@ -95,7 +95,6 @@ apps:
     category: simple
     emoji: '🧰'
 
-
   - title: PdbCov
     description: 3D Protein Sequence Coverage Visualizer
     url: https://pdb-cov.streamlit.app/
@@ -108,15 +107,11 @@ apps:
     category: pdb_cov
     emoji: '🔬'
 
-
-
   - title: TimsTof-DutyCycle
     description: A simple duty cycle calculator
     url: https://timsdutycycle-plotly.streamlit.app/
     category: other
     emoji: '🔧'
-
-
 
   - title: FileViewer
     description: A tabular & parquet file viewer
@@ -161,11 +156,16 @@ apps:
     url: https://seq-cov.streamlit.app/
     category: other
     emoji: '🧬'
-
   
   - title: SageAmbiguityAnnot
     description: Annoatate Sage PSMs with Sequence Ambiguity
     url: https://sage-peptide-ambiguity-annotator.streamlit.app/
+    category: other
+    emoji: '🧬'
+  
+  - title: FastaFrames
+    description: Convert Fasta to CSV
+    url: https://fastaframes.streamlit.app/
     category: other
     emoji: '🧬'
 
