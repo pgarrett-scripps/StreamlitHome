@@ -169,6 +169,12 @@ apps:
     category: other
     emoji: '🧬'
 
+  - title: SageViewer
+    description: View Sage Search Results
+    url: https://sage-pro-viewer.streamlit.app/
+    category: other
+    emoji: '🧬'
+
   # IP2 Specific
   # https://enzyme-site-explorer.streamlit.app/
   - title: EnzymeSiteExplorer
